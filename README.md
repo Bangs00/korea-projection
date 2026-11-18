@@ -253,5 +253,5 @@ NEMESIS Manager → My Packages → **Korea Projection: Wireless for Korean Cars
 - [HMG-API](https://github.com/Open-HMG/HMG-API) — VysseCodes
   
 ### 후원 해주신 분
-아이리어펠님, 야밤에 출출하게 개발할 때 먹기 좋은 맥도날드 교환권
-RYUEK님, 비오늘 날 너무 맛있게 먹으면서 개발했습니다, 뿌링클콤보와 콜라
+- 아이리어펠님, 야밤에 출출하게 개발할 때 먹기 좋은 맥도날드 교환권
+- RYUEK님, 비오늘 날 너무 맛있게 먹으면서 개발했습니다, 뿌링클콤보와 콜라
