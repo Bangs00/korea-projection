@@ -1,11 +1,9 @@
 # Korea Projection
 
-[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-%ED%9B%84%EC%9B%90%ED%95%98%EA%B8%B0-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/StopDragon) [![Ko-fi](https://img.shields.io/badge/Ko--fi-%EC%BB%A4%ED%94%BC%20%ED%95%9C%20%EC%9E%94-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white)](https://ko-fi.com/stopdragon)
-
 > [!NOTE]
 > **이 문서의 USB Wi-Fi 동글 구매 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.**
 >
-> 개발자가 틈틈이 취미로 하는 프로젝트입니다. 동글이 필요하신 분은 [아래 쿠팡 링크](#usb-wi-fi-동글-180-준비-중)로 구매해 주시면 개발에 큰 응원이 됩니다.
+> 동글이 필요하신 분은 [아래 쿠팡 링크](#usb-wi-fi-동글-180-준비-중)로 구매해 주시면 개발에 큰 응원이 됩니다.
 >
 > 퇴근 후와 주말에 만들고 있습니다. [커피 한 잔](https://ko-fi.com/stopdragon)이나 [GitHub Sponsors](https://github.com/sponsors/StopDragon) 후원은 시험용 부품을 사는 데 씁니다.
 >
@@ -14,17 +12,16 @@
 한국 현대·기아 내비(Gen5W 헤드유닛)에서 **무선 카플레이**와 **무선 안드로이드 오토**를 쓸 수 있게 해 주는 NEMESIS 패키지입니다.
 
 - 한국 5W 펌웨어에서는 wifi 모듈을 사용할 수 없어 무선 카플레이 혹은 무선 안드로이드 오토를 무선으로 사용할 수 없습니다.
-- 부팅할 때 순정 `hostapd`와 `dnsmasq`를 직접 켜서 폰이 무선으로 붙게 합니다. HMG-API 무선 모드와 그 차의 지도도 **자동으로 설치**하므로 HMG-API 앱에서 따로 설정하지 않아도 됩니다.
+- HMG-API 무선 모드와 그 차의 지도도 **자동으로 설치**하므로 HMG-API 앱에서 따로 설정하지 않아도 됩니다.
 
 > ⚠️ 취미 목적으로 개발된 차량 소프트웨어를 바꾸는 일입니다. 모든 책임은 설치하신 차주 본인에게 있습니다.
-
-버전별 변경 내역은 [릴리스](../../releases)에 있습니다.
+<br>
 
 ## 지원 차량
 
-**✅ 확인 46종** (현대 그랜저·쏘나타·아반떼·싼타페·팰리세이드·투싼·캐스퍼·벨로스터 N·코나 EV·아이오닉 5, 기아 니로·K5·K7 프리미어·K8·쏘렌토·스팅어·K3·쏘울 부스터 EV·셀토스·EV6·카니발·레이·모하비, 제네시스 G70) · **🧪 시험 중 9종**. 연식·동력(가솔린·하이브리드 등)이 다르면 따로 셉니다.
+**✅ 확인 46종** (현대 그랜저·쏘나타·아반떼·싼타페·팰리세이드·투싼·캐스퍼·벨로스터 N·코나 EV·아이오닉 5, 기아 니로·K5·K7 프리미어·K8·쏘렌토·스팅어·K3·쏘울 부스터 EV·셀토스·EV6·카니발·레이·모하비, 제네시스 G70) · **🧪 시험 중 9종**. 
 
-목록에 없는 한국 차(`*.KOR.*`)도 설치하면 **자동으로 시도**합니다. HMG-API가 내 차에서 지도를 만들어 맞는지 확인한 뒤 켜 봅니다. 아반떼·투싼·캐스퍼·싼타페·스팅어 등 여러 차가 이렇게 동작을 확인했습니다.
+목록에 없는 한국 차(`*.KOR.*`)도 설치하면 **자동으로 시도**합니다. 
 
 <details>
 <summary><b>차종별 지원 목록 펼치기</b></summary>
@@ -114,6 +111,8 @@
 작동 여부를 떠나 꼭 제보를 해주세요.
 [내 차 제보 가이드](docs/car-report-guide.md)대로 USB를 꽂고 Launch 화면의 **[제보 파일 만들기]**를 눌러, USB의 `KoreaProjection-report` 폴더 안 **파일 3개**를 내 차종 이슈에 댓글로 보내 주세요. 된다고 알려 주시면 그 차를 **✅ 확인됨**으로 올리고, 안 되면 파일 속 기록으로 원인을 찾습니다.
 
+<br>
+
 ### USB Wi-Fi 동글 (1.8.0 준비 중)
 
 내비에 Wi-Fi 부품이 없거나 모종의 이유로 Wi-Fi 칩이 켜지지 않는 차를 위해 **1.8.0에서 USB Wi-Fi 동글 지원을 준비하고 있습니다.**
@@ -126,14 +125,10 @@
 | TP-Link Archer T3U | 🧪 1.8.0 준비 중 | [link.coupang.com/a/izqs0SMtaK](https://link.coupang.com/a/izqs0SMtaK) |
 | 리버네트워크 NEXI NX-AC1300 | 🧪 1.8.0 준비 중 | [link.coupang.com/a/izq0opYmQe](https://link.coupang.com/a/izq0opYmQe) |
 
-- **5GHz를 지원하는 듀얼밴드 동글이어야 합니다.** 
-- 세 제품 모두 Realtek RTL8812BU 칩을 씁니다. 같은 모델명이라도 출시 시기에 따라 칩이 바뀔 수 있고, 칩이 다르면 동작하지 않을 수 있습니다. 1.8.0에서 확인되기 전에 미리 사시는 것은 본인 판단입니다.
-- **내비 Wi-Fi를 쓸 수 없다고 나온 차**(부품 없음·칩 실패)는 **Uninstall로 지우기 전에 먼저** [제보 파일](docs/car-report-guide.md)을 만들어 내 차종 이슈에 올려 주세요. 1.8.0을 만드는 데 필요한 내비 정보가 그 파일에 들어 있습니다.
-- **동글을 이미 갖고 있거나 사실 분**은 가능하면 **동글을 꽂은 채로** 제보 파일을 만들어 주세요. USB 포트가 하나뿐이라 함께 꽂을 수 없으면 ① 동글을 꽂고 시동을 건 뒤 ② 동글을 빼고 ③ USB를 꽂아 제보 파일을 만들면 됩니다(1.7.4 베타 2부터 서비스가 부팅 때 꽂혀 있던 USB 장치의 ID를 기억합니다).
-- 제보에 들어가는 USB 정보는 **제조사·제품 번호와 장치 종류뿐**입니다. 일련번호·장치 이름·주소는 들어가지 않습니다.
-- 이것은 **지원을 약속하는 것이 아니라 1.8.0 준비를 위한 조사**입니다. 차에서 확인되기 전까지는 🧪입니다.
 
-> 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+> 이 링크를 통해 구매하시면, 개발자가 소정의 수수료를 쿠팡에게 제공받습니다. 개발에 큰 도움이 됩니다.
+
+<br>
 
 ## 질문·제보는 GitHub에서, 사용자끼리 이야기는 오픈 카톡방에서
 
@@ -150,19 +145,19 @@
 
 나머지는 Korea Projection이 알아서 갖춥니다.
 - **HMG-API 무선 모드**(1.7.4부터 이름 `Korea Projection: Wireless CarPlay + Android Auto`, 1.7.3까지는 `Wireless CarPlay + Android Auto`로 보입니다. HMG-API 공식 모드와 헷갈리지 않게 이름을 바꿨습니다): 없으면 설치하고, 이 패키지가 넣은 모드가 예전 판이면 새 판으로 바꿉니다. 차주가 일부러 지우거나 꺼 둔 것은 다시 설치하지 않습니다.
-- **그 차의 HMG-API 지도:** 없으면 넣거나 그 차에서 만들고, 차에 맞는지 확인합니다.
 - 넣는 무선 모드는 HMG-API 공식 모드에 한국 차를 더한 **"한국 차 빌드"**입니다. HMG-API 공식판에 한국 차 지원이 아직 없기 때문입니다([VysseCodes/HMG-API#22](https://github.com/VysseCodes/HMG-API/pull/22)). 공식판이 지원하면 공식 모드로 옮깁니다.
-- HMG-API에 차에 맞지 않는 다른 무선 모드(예: 북미 차용 기본판)가 이미 있으면 덮어쓰지 않습니다. Launch 화면 안내대로 HMG-API 앱에서 지우고 적용한 뒤 재부팅해 주세요.
 - Korea Projection을 삭제하면 함께 설치했던 무선 모드도 지웁니다.
 
 `wireless.projection` 패키지는 **필요 없습니다.** 설치되어 있으면 먼저 삭제해 주세요.
+
+<br>
 
 ## 설치
 
 처음이시면 **[설치 가이드](docs/install-guide.md)**를 따라 하세요. 포맷부터 폰 연결, 잘 안 될 때까지 한 단계씩 적었습니다.
 
 1. USB를 **FAT32**로 포맷합니다(32GB 이하 USB 권장).
-2. [릴리스](../../releases/latest)에서 **`korea-projection-버전-usb.zip`**을 받습니다. `NEMESIS.data`는 안에 들어 있으니 만들지 않아도 됩니다.
+2. [릴리스](../../releases/latest)에서 **`korea-projection-가장 최신 버전-usb.zip`**을 받습니다.
 3. 압축을 풀고, 풀린 폴더 **안에 있는 것**을 USB **맨 위**에 복사합니다.
    ```
    USB
@@ -173,15 +168,15 @@
    ```
 4. 내비 화면이 다 뜬 뒤 USB를 꽂고, 설치할지 물으면 **예**를 누릅니다.
 5. USB를 빼고 **3~5분 기다립니다.** 이 동안 재부팅하지 마세요.
-   - NEMESIS Manager에서 이 패키지(Korea Projection: Wireless for Korean Cars)의 **Launch**를 누르면 설치 진행 막대와 알림이 보입니다(뜰 때까지 5~10초).
-   - "무선 카플레이 설정을 마쳤습니다" 알림이 뜨면 **내비를 재부팅합니다**. 1.7.3부터는 화면의 **[제보 파일 만들기]** 옆 **[지금 재부팅]** 버튼으로도 됩니다(차를 세운 상태에서만). RESET 버튼이나 NEMESIS Manager의 재부팅도 됩니다([자세히](docs/install-guide.md#내비-재부팅하는-법)). 시동만 끄면 내비가 꺼지지 않을 수 있습니다.
+   - NAV 버튼을 3번 연속 눌러 NEMESIS Manager에서 이 패키지(Korea Projection: Wireless for Korean Cars)의 **Launch**를 누르면 설치 진행 막대와 알림이 보입니다(뜰 때까지 약10초 소요).
+   - "설정을 마쳤습니다" 알림이 뜨면 **내비를 재부팅합니다**. ([자세히](docs/install-guide.md#내비-재부팅하는-법)). 시동만 끄면 내비가 꺼지지 않을 수 있습니다.
 6. 폰에서 무선 카플레이(또는 무선 안드로이드 오토)를 연결합니다.
 
 예전 버전에서 업데이트할 때도 같은 방법으로 설치하면 됩니다. 단 **1.7.4는 1.7.3 이상에서만 바로 업데이트**됩니다. 1.7.2 이하는 먼저 삭제 → 재부팅 → 설치하세요([업데이트하는 법](docs/install-guide.md#업데이트하는-법)).
 
 NEMESIS Manager의 Package Store에 올라간 판은 최신이 아닐 수 있습니다. 최신 판은 위 방법대로 릴리스의 USB 묶음으로 설치하세요.
 
-> **NEMESIS Manager 목록 이름:** **Korea Projection: Wireless for Korean Cars**입니다. 예전 버전은 **Korea Projection** 또는 **Wireless Projection for Korean Cars**로 보이지만 같은 패키지(`korea.projection`)입니다.
+<br>
 
 ## 상태 확인과 제보
 
@@ -215,6 +210,8 @@ NEMESIS Manager → My Packages → **Korea Projection: Wireless for Korean Cars
 - 카플레이 계기판 안내는 **지도 앱이 안내 정보를 차로 보낼 때만** 나옵니다. 일부 차(아반떼 CN7 등)에서는 T맵·카카오내비 안내가 오지 않는 사례가 있어 조사하고 있습니다.
 - 안드로이드 오토 음악이 시동 직후 끊기며 순정 미디어 화면과 오가면, 내비의 **블루투스 설정 → 블루투스 오디오 전환 → "휴대폰에서 전환 허용 안 함"**을 골라 보세요(순정의 자동 전환 기능 때문으로 보입니다).
 - **카플레이 화면 멈춤:** 쏘나타 하이브리드·K7 프리미어 등에서 가끔 카플레이 화면이 멈추는 문제([#16](../../issues/16)·[#29](../../issues/29)·[#36](../../issues/36)·[#67](../../issues/67)·[#121](../../issues/121))는 원인을 모르고 조사하고 있습니다. 1.7.4에서는 ☆ 키를 "폰 프로젝션 바로가기"로 쓰는 차에서 누를 때마다 뜨던 순정 "연결 방법 안내" 팝업을 띄우지 않게 했습니다(무선 모드 2.4.5). 이 팝업이 카플레이 화면과 겹쳐 화면이 굳은 일이 한 번 로그로 확인됐기 때문입니다. **차에서 확인하기 전이고, ☆ 키와 상관없는 멈춤은 이 수정의 대상이 아닙니다.**
+  
+<br>
 
 ## 알아 두실 점
 
@@ -225,6 +222,8 @@ NEMESIS Manager → My Packages → **Korea Projection: Wireless for Korean Cars
 - 설치 뒤 약 5분 동안 재부팅하지 마세요.
 - Wi-Fi 부품이 없는 차는 켜지지 않습니다.
 - 차 설정에서 ADB TCP가 켜져 있으면 HMG-API가 경고를 띄웁니다. 이 패키지는 `192.168.43.x` 대역을 써서 영향이 없었습니다.
+
+<br>
 
 ## 삭제
 
@@ -238,17 +237,7 @@ NEMESIS Manager → My Packages → **Korea Projection: Wireless for Korean Cars
 
 삭제할 때 Wi-Fi를 껐다 켜지 않는 이유가 있습니다. 니로에서 확인해 보니 Wi-Fi를 껐다 켜면 Wi-Fi·블루투스 모듈이 다시 시작되고, 블루투스 카플레이가 재부팅 전까지 되지 않았습니다.
 
-## 개발
-
-- 패키지 소스: `nemesis-pkg/korea.projection/`, 상태 화면 앱: `nemesis-pkg/app-src/` (빌드: `scripts/build-app.sh`, Android SDK build-tools와 android-19 필요)
-- 함께 배포하는 HMG-API 무선 모드(한국 차 빌드)의 소스: [`hmgapi-mod/`](hmgapi-mod/README.md)
-- 차에 올리기 전 PC 테스트: `sh tests/stub-test.sh`. 가짜 헤드유닛 환경에서 설치·되돌리기·리포트를 검사합니다.
-- 차 테스트용 USB 스크립트: `scripts/`
-- 규칙:
-  - 사용자 안내는 한국어로 씁니다.
-  - 차 테스트와 배포 전에 코드 리뷰를 합니다.
-  - 실패하면 기존 상태를 유지하고, 항상 되돌릴 방법을 둡니다.
-  - 비밀번호·폰 이름·VIN 같은 개인정보는 기록하지 않습니다.
+<br>
 
 ## 라이선스
 
@@ -258,7 +247,11 @@ NEMESIS Manager → My Packages → **Korea Projection: Wireless for Korean Cars
 - 다른 프로젝트에서 가져온 부분과 원저작권은 [`NOTICE.md`](NOTICE.md)에 적었습니다.
 - 1.7.0부터 패키지에 함께 넣는 `bin/busybox`(K3·K8 등 busybox 없는 내비용)는 Korea Projection과 별개 프로그램이며 **GPL-2.0**입니다. 출처와 대응 소스는 [`NOTICE.md`](NOTICE.md#busybox-gpl-20)에 있습니다.
 
-## 감사
-
+## 감사의 인사
+### 5W 자유도를 선사하신 분들
 - [NEMESIS](https://github.com/xwtk/hmg_nemesis) — xwtk
 - [HMG-API](https://github.com/Open-HMG/HMG-API) — VysseCodes
+  
+### 후원 해주신 분
+아이리어펠님, 야밤에 출출하게 개발할 때 먹기 좋은 맥도날드 교환권
+RYUEK님, 비오늘 날 너무 맛있게 먹으면서 개발했습니다, 뿌링클콤보와 콜라
