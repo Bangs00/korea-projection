@@ -30,7 +30,7 @@ def pack(source, output):
             if not path.is_file() or path.name == '.DS_Store':
                 continue
             name = path.relative_to(source).as_posix()
-            item = zipfile.ZipInfo(name, (2026, 11, 21, 0, 0, 0))
+            item = zipfile.ZipInfo(name, (2026, 11, 22, 0, 0, 0))
             executable = path.suffix == '.sh' or path.name in ('busybox', 'ctrl-status', 'ap-capabilities')
             item.external_attr = (stat.S_IFREG | (0o755 if executable else 0o644)) << 16
             item.compress_type = zipfile.ZIP_DEFLATED
@@ -64,6 +64,21 @@ def verify_corresponding_sources():
             raise SystemExit('Missing EV6 helper source/notice: '+name)
 
 
+def write_offline_entrypoints(usb):
+    """Use NEMESIS's native local ZIP install, without opening Package Store."""
+    usb = Path(usb)
+    logs_zip = usb/'packages/korea.projection.usblogs.zip'
+    if not logs_zip.is_file():
+        raise FileNotFoundError('Missing local Logs package: '+str(logs_zip))
+    shutil.copyfile(BASE/'usb/NEMESIS.data', usb/'NEMESIS.data')
+    target = usb/'Logs-Install-USB'
+    (target/'packages').mkdir(parents=True, exist_ok=True)
+    for name in ['NEMESIS.data', 'README.txt']:
+        shutil.copyfile(BASE/'usb/Logs-Install-USB'/name, target/name)
+    shutil.copyfile(logs_zip, target/'packages/korea.projection.usblogs.zip')
+    shutil.copyfile(usb/'KP_USB_EXPORT.txt', target/'KP_USB_EXPORT.txt')
+
+
 def build():
     for name, expected in {**PINNED, **EXTERNAL_PINS}.items():
         if not (BASE/'pkg'/name).is_file():
@@ -92,8 +107,11 @@ def build():
     shutil.copyfile(BASE/'pkg/bin/busybox-LICENSE.txt', usb/'BUSYBOX-LICENSE.txt')
     pack(BASE/'pkg', usb/'packages/korea.projection.zip')
     pack(BASE/'logs-pkg', usb/'packages/korea.projection.usblogs.zip')
+    write_offline_entrypoints(usb)
     manifest = {
         'version': VERSION, 'distribution': 'private user modification',
+        'installation': 'offline local ZIP via native type=install',
+        'logs_installer': 'Logs-Install-USB (optional, native type=install)',
         'selection': 'native radio or actual USB ID/class plus kernel/config/stock/export cohort',
         'software_profiles': ['default signed mode 2.4.5', 'NX4HEV signed mode 2.4.6', 'gated EV6 AA helper'],
         'ac_usb_ids': json.loads((BASE/'ORIGINS.json').read_text())['allowed_usb_ids'],

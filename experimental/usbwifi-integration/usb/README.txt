@@ -1,5 +1,5 @@
 Korea Projection 1.7.4.2 — 개인용 자동 USB Wi-Fi 통합판
-2026-11-21 (한국 시간), 원개발자 공식 배포가 아닙니다.
+2026-11-22 오프라인 설치 수정본. 패키지 버전은 1.7.4.2이며 원개발자 공식 배포가 아닙니다.
 
 차종 이름으로 USB 지원을 제한하지 않습니다.
 1. 실제 내장 BCM/SDIO Wi-Fi가 있으면 기존 내장 Wi-Fi 경로를 우선합니다.
@@ -80,17 +80,25 @@ EV6에서 usbwifi.hotspot 등 별도 동글 패키지를 쓰고 있었다면 그
 삭제하고 재부팅합니다. HMG-API와 KP의 무선 모드는 별도로 삭제하지 않습니다.
 다른 jmk-wifi / usbwifi.hotspot / Driver Probe 등의 동시 실행은 막습니다.
 
-설치 (정차 상태)
+설치 (정차 상태, 차량 인터넷 연결 불필요)
+기존 KP처럼 NEMESIS와 HMG-API가 차량에 설치된 상태를 기준으로 합니다.
+이 묶음은 USB 안의 ZIP을 직접 설치하며 Package Store를 열지 않습니다.
+
 1. 바깥 ZIP을 풀고 '안의 내용'을 FAT32 USB 최상위에 복사합니다.
    USB를 열면 NEMESIS.data, packages/, KP_USB_EXPORT.txt가 바로 보여야 합니다.
    packages 안 ZIP은 풀지 않습니다.
-2. USB의 Package Store에서 'Korea Projection 1.7.4.2 Personal'을 설치/업데이트합니다.
-   'KP USB Wi-Fi Logs'도 설치합니다. 이 Logs는 Wi-Fi 연결 서비스가 아닙니다.
-3. USB를 빼고 동글 하나를 꽂은 다음 내비를 한 번 재부팅합니다.
+2. 차에 USB를 꽂으면 KP 설치/업데이트 확인 창이 바로 뜹니다. '예'를 누릅니다.
+   스토어에 들어가거나 인터넷에 연결할 필요가 없습니다.
+   이전 설치 USB를 쓰고 있다면 루트의 NEMESIS.data도 반드시 새 파일로 덮어씁니다.
+3. KP USB Wi-Fi Logs가 아직 없다면 Logs-Install-USB 폴더 '안의 내용'을
+   USB 최상위에 복사한 뒤 차에 다시 꽂고 Logs 설치/업데이트에 '예'를 누릅니다.
+   이 도구도 인터넷 없이 설치됩니다. 이미 1.7.4.2가 있으면 생략합니다.
+   Logs는 연결 서비스가 아닌 진단 도구이므로 본체 연결 시험에 필수는 아닙니다.
+4. USB를 빼고 동글 하나를 꽂은 다음 내비를 재부팅합니다.
    기존 드라이버가 메모리에 남아 있을 수 있어 재부팅이 필요합니다.
-4. 5분 기다리고 Korea Projection → Launch에서 설치 진행을 확인합니다.
-   설정 완료 후 재부팅 요청이 있으면 따릅니다. 짧은 간격으로 재부팅하지 않습니다.
-5. 기존 Bluetooth/CarPlay/Android Auto 등록으로 연결을 확인합니다.
+5. 5분 기다리고 NEMESIS → My Packages → Korea Projection → Launch에서
+   설치 진행을 확인합니다. 완료 후 재부팅 요청이 있으면 따릅니다.
+6. 기존 Bluetooth/CarPlay/Android Auto 등록으로 연결을 확인합니다.
    새 등록이 필요하면 휴대폰과 차 양쪽에서 이전 등록을 지우고 다시 등록합니다.
    원래 무선 모드를 일부러 꺼 두거나 고정한 상태는 자동으로 우회하지 않습니다.
 
@@ -133,3 +141,8 @@ G70의 이전 0.4.0, 제공된 NX4HEV 계열, EV6 원 프로젝트의 AA 시험 
 다시 시험할 때는 Logs 복사 모드로 재부팅해 모듈이 내려간 상태에서 설치 USB 최상위에
 빈 KP_USB_RETRY_DRIVER.txt를 두고 같은 버전을 업데이트합니다. 재시도 후 이 파일은
 지웁니다. 이 선택도 필수 호환/소유권 검사를 생략하지 않으며, 실행 중 모듈은 내리지 않습니다.
+
+2026-11-22 설치 방식 수정
+이전 type=list 설치 목록을 원래 KP와 같은 type=install로 바꿨습니다.
+기본 묶음을 꽂으면 USB의 KP ZIP을 직접 설치합니다. Logs도 별도 폴더의
+type=install로 설치합니다. APK·드라이버·무선 모드 변경 없이 설치 진입점만 고쳤습니다.

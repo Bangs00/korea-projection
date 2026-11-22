@@ -43,3 +43,16 @@ CI for this candidate validates only public-input host behavior. It does not
 sign or publish an installer, access a vehicle, or silently replace the missing
 NX4 mode. A fork CI result and any upstream approval requirement are recorded
 in the PR description separately.
+
+## Offline installation entrypoint (2026-11-22)
+
+The USB root now uses the original KP `type=install` descriptor instead of
+opening Package Store with `type=list`. Logs has a self-contained optional
+`Logs-Install-USB/` stick layout using the same native local ZIP install path.
+Three focused packaging tests passed: direct KP installation, standalone Logs
+path/marker resolution, and rejection of a missing local Logs package. Both
+complete USB archives passed CRC, descriptor-to-local-package, export marker
+and SHA256SUMS checks. The repaired user bundle retains the exact original KP
+and Logs package ZIP bytes. No runtime driver or signed-mode changes were made
+for this installation fix. Installing on a vehicle without a network has not
+been physically repeated here; NEMESIS and HMG-API remain installed prerequisites.
